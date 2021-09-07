@@ -7,6 +7,8 @@ DialogAddProduct::DialogAddProduct(QWidget *parent,  QSqlDatabase db) :
 {
     ui->setupUi(this);
     m_db = db;
+    ui->spinBox_startingInventory->setRange(0,50000);
+    ui->spinBox_minimumRequired->setRange(0,50000);
 }
 
 DialogAddProduct::~DialogAddProduct()

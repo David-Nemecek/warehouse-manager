@@ -7,7 +7,7 @@ DialogAddOrder::DialogAddOrder(QWidget *parent, QSqlDatabase db) :
 {
     ui->setupUi(this);
     m_db = db;
-
+    ui->spinBox_numberShipped->setRange(0,50000);
     setDialogValues();
 }
 

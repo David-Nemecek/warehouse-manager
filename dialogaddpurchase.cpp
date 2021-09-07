@@ -7,7 +7,7 @@ DialogAddPurchase::DialogAddPurchase(QWidget *parent, QSqlDatabase db) :
 {
     ui->setupUi(this);
     m_db = db;
-
+    ui->spinBox_numberReceived->setRange(0,50000);
     setDialogValues();
 }
 
