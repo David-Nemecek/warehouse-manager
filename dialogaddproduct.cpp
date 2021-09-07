@@ -16,6 +16,6 @@ DialogAddProduct::~DialogAddProduct()
 
 void DialogAddProduct::on_buttonBox_accepted()
 {
-    QSqlQuery q("INSERT INTO products (`ProductName`, `StartingInventory`, `InventoryReceived`, `InventoryShipped`, `InventoryOnHand`, `MinimumRequired`) VALUES ('"
-                + ui->lineEdit_productName->text() + "', " + ui->spinBox_startingInventory->text() + ", 0, 0, " + ui->spinBox_startingInventory->text() + ", " + ui->spinBox_minimumRequired->text() + ")", m_db);
+    QSqlQuery q("INSERT INTO products (`ProductName`, `StartingInventory`, `MinimumRequired`) VALUES ('"
+                + ui->lineEdit_productName->text() + "', " + ui->spinBox_startingInventory->text() + ", " + ui->spinBox_minimumRequired->text() + ")", m_db);
 }
