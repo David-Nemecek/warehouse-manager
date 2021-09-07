@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QStackedWidget" name="stackedWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>120</y>
+      <width>781</width>
+      <height>441</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <widget class="QWidget" name="page_currentInventory">
+     <widget class="QLabel" name="label_products">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>271</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 14pt &quot;MS Shell Dlg 2&quot;;</string>
+      </property>
+      <property name="text">
+       <string>Products</string>
+      </property>
+     </widget>
+     <widget class="QTableView" name="tableView_currentInventory">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>60</y>
+        <width>761</width>
+        <height>301</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_addProduct">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>370</y>
+        <width>161</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+ 	background-color: red; 
+	border: 1px solid black; 
+	font: 12pt &quot;MS Shell Dlg 2&quot;;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton:hover {
+	background-color: rgb(200, 0, 0);
+}</string>
+      </property>
+      <property name="text">
+       <string>Add New Product</string>
+      </property>
+     </widget>
+     <widget class="QDateEdit" name="dateEdit_fromFilterProducts">
+      <property name="geometry">
+       <rect>
+        <x>430</x>
+        <y>30</y>
+        <width>110</width>
+        <height>22</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QDateEdit" name="dateEdit_toFilterProducts">
+      <property name="geometry">
+       <rect>
+        <x>570</x>
+        <y>31</y>
+        <width>110</width>
+        <height>21</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_filterProducts">
+      <property name="geometry">
+       <rect>
+        <x>690</x>
+        <y>22</y>
+        <width>31</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 10pt &quot;MS Shell Dlg 2&quot;;</string>
+      </property>
+      <property name="text">
+       <string>ok</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_fromFilterProducts">
+      <property name="geometry">
+       <rect>
+        <x>400</x>
+        <y>30</y>
+        <width>31</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>From:</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_toFilterProducts">
+      <property name="geometry">
+       <rect>
+        <x>550</x>
+        <y>30</y>
+        <width>21</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>To:</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_reverseFilter">
+      <property name="geometry">
+       <rect>
+        <x>730</x>
+        <y>22</y>
+        <width>31</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">padding-bottom: 4px ;
+font: 22pt &quot;MS Shell Dlg 2&quot;;</string>
+      </property>
+      <property name="text">
+       <string>🗘</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="page_incomingPurchases">
+     <widget class="QLabel" name="label_purchases">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>101</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 14pt &quot;MS Shell Dlg 2&quot;;</string>
+      </property>
+      <property name="text">
+       <string>Purchases</string>
+      </property>
+     </widget>
+     <widget class="QTableView" name="tableView_incomingPurchases">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>60</y>
+        <width>761</width>
+        <height>301</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_addPurchase">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>370</y>
+        <width>161</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+ 	background-color: red; 
+	border: 1px solid black; 
+	font: 12pt &quot;MS Shell Dlg 2&quot;;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton:hover {
+	background-color: rgb(200, 0, 0);
+}</string>
+      </property>
+      <property name="text">
+       <string>Add New Purchase</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="page_outgoingOrders">
+     <widget class="QLabel" name="label_orders">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>71</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 14pt &quot;MS Shell Dlg 2&quot;;</string>
+      </property>
+      <property name="text">
+       <string>Orders</string>
+      </property>
+     </widget>
+     <widget class="QTableView" name="tableView_outgoingOrders">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>60</y>
+        <width>761</width>
+        <height>301</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_addOrder">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>370</y>
+        <width>161</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+ 	background-color: red; 
+	border: 1px solid black; 
+	font: 12pt &quot;MS Shell Dlg 2&quot;;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton:hover {
+	background-color: rgb(200, 0, 0);
+}</string>
+      </property>
+      <property name="text">
+       <string>Add New Order</string>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QPushButton" name="pushButton_currentInventory">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>60</y>
+      <width>171</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+ 	background-color: rgb(0, 180, 0); 
+	border: 1px solid black; 
+	font: 11pt &quot;MS Shell Dlg 2&quot;;
+	color: rgb(255, 255, 255);
+    font-weight: bold;
+}
+
+QPushButton:hover {
+	background-color: rgb(0, 150, 0);
+}</string>
+    </property>
+    <property name="text">
+     <string>Current Inventory</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_incomingPurchases">
+    <property name="geometry">
+     <rect>
+      <x>200</x>
+      <y>60</y>
+      <width>171</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+ 	background-color: rgb(0, 180, 0); 
+	border: 1px solid black; 
+	font: 11pt &quot;MS Shell Dlg 2&quot;;
+	color: rgb(255, 255, 255);
+    font-weight: normal;
+}
+
+QPushButton:hover {
+	background-color: rgb(0, 150, 0);
+}</string>
+    </property>
+    <property name="text">
+     <string>Incoming Purchases</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_outgoingOrders">
+    <property name="geometry">
+     <rect>
+      <x>380</x>
+      <y>60</y>
+      <width>171</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+ 	background-color: rgb(0, 180, 0); 
+	border: 1px solid black; 
+	font: 11pt &quot;MS Shell Dlg 2&quot;;
+	color: rgb(255, 255, 255);
+    font-weight: normal;
+}
+
+QPushButton:hover {
+	background-color: rgb(0, 150, 0);
+}</string>
+    </property>
+    <property name="text">
+     <string>Outgoing Orders</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_warehouseManager">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>10</y>
+      <width>321</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 75 18pt &quot;MS Shell Dlg 2&quot;;
+font-weight: bold;</string>
+    </property>
+    <property name="text">
+     <string>Warehouse Manager</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
